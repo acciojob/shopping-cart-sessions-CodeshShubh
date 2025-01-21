@@ -57,7 +57,7 @@ function renderCart() {
 // Add item to cart
 function addToCart(productId) {
   const product = products.find((p) => p.id === productId);
-  if (product && !cart.find((item) => item.id === productId)) {
+  if (product) {
     cart.push(product);
     sessionStorage.setItem("cart", JSON.stringify(cart)); // Save cart to session storage
     renderCart();
